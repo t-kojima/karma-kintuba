@@ -5,7 +5,7 @@ var createPattern = function(file) {
 };
 
 var initKinmock = function(files) {
-    var kinmockPath = path.dirname(require.resolve('kinmock')) + '/index.js';
+    var kinmockPath = path.dirname(require.resolve('kinmock')) + '/bundle.js';
     files.unshift(createPattern(kinmockPath));
 };
 
