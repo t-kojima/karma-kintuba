@@ -1,9 +1,9 @@
 {
-  "name": "karma-kinmock",
+  "name": "karma-kintuba",
   "version": "0.0.1",
-  "description": "kinmock for karma",
+  "description": "kintuba for karma",
   "main": "index.js",
-  "repository": "git@github.com:t-kojima/karma-kinmock.git",
+  "repository": "git@github.com:t-kojima/karma-kintuba.git",
   "author": "t-kojima <t-kojima@skullware.net>",
   "license": "MIT",
   "private": true
