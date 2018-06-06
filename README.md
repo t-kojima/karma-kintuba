@@ -1,1 +1,1 @@
-# karma-kinmock
+# karma-kintuba
