@@ -6,5 +6,9 @@
   "repository": "git@github.com:t-kojima/karma-kintuba.git",
   "author": "t-kojima <t-kojima@skullware.net>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "peerDependencies": {
+    "karma": ">= 2.X",
+    "kintuba": "*"
+  }
 }
