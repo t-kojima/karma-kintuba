@@ -1,5 +1,6 @@
 # karma-kintuba
 
+[![npm version](https://badge.fury.io/js/karma-kintuba.svg)](https://badge.fury.io/js/karma-kintuba)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 kintuba for karma.
@@ -43,7 +44,7 @@ files: [
 ],
 ```
 
-実際使用する際のファイルは以下のようになると思います。
+実際使用する際のファイルは以下のようになります。
 
 ```js
 module.exports = config => {
@@ -77,6 +78,8 @@ module.exports = config => {
 
 以上の設定で、karma でテストを実行する際に`kintone`オブジェクトのスタブを利用することができます。
 
+使用例）
+
 ```js
 describe('example', () => {
   it('can get ui version', () => {
@@ -87,18 +90,18 @@ describe('example', () => {
 
 ### テストデータの利用
 
-デフォルトの状態ではデータが存在しない為、`event.records`などにアクセスしても空配列が返ります。テストデータを返すようにするには、テストデータを用意し以下の手順で都度読み込んでください。また、テストデータの作成は<ここ>を参考に行ってください。
+デフォルトの状態ではデータが存在しない為、`event.records`などにアクセスしても空配列が返ります。テストデータを返すようにするには、テストデータを用意し以下の手順で都度読み込んでください。また、テストデータの作成は[ここ](https://github.com/t-kojima/kintuba/blob/master/docs/Commands.md)を参考に行ってください。
 
 ### schema
 
-`schema.load()`を実行すると、`.kintuba/schema`ディレクトリにある以下のファイルを読み込みます。尚、非同期に実行される点注意して下さい。
+`schema.load()`を実行すると、`.kintuba/schema` ディレクトリにある以下のファイルを読み込みます。
 
 - app.json
 - fields.json
 - form.json
 - views.json
 
-非同期に読み込まれる為、async/await で読み込みます。
+尚、非同期に読み込まれる為、以下の例では async/await で読み込んでいます。
 
 ```js
 describe('example', () => {
@@ -117,23 +120,19 @@ await schema.load('other/dir')
 
 ### fixture
 
-`fixture.load()`を実行すると、`.kintuba/fixture`ディレクトリにある以下のファイルを読み込みます。尚、非同期に実行される点注意して下さい。
+`fixture.load()`を実行すると、`.kintuba/fixture`ディレクトリにある以下のファイルを読み込みます。
 
 - login.json
 - records.json
 
-schema と同様に、既定のディレクトリ以外を読む場合は引数で指定します。
+`schema`と同様に非同期に実行される点注意して下さい。
+
+また、既定のディレクトリ以外を読む場合は引数で指定します。
 
 ```js
 await fixture.load('other/dir')
 // other/dir/login.json等がロードされる
 ```
-
-## examples
-
-具体的な使用例はこちらのリポジトリを参照下さい。
-
-[https://github.com/t-kojima/kintuba-example](https://github.com/t-kojima/kintuba-example)
 
 ## Licence
 
