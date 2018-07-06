@@ -134,6 +134,14 @@ await fixture.load('other/dir')
 // other/dir/login.json等がロードされる
 ```
 
+## Browser
+
+サポート対象のブラウザは以下の通りです。
+
+- Microsoft Edge >=16
+- Mozilla Firefox >=60
+- Google Chrome >=66
+
 ## Licence
 
 MIT License.
